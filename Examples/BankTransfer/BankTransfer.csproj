@@ -5,8 +5,3 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\AfricasTalkingCS\AfricasTalkingCS.csproj" />
-  </ItemGroup>
-
-</Project>
