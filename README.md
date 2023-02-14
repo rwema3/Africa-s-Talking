@@ -2,7 +2,7 @@
 
 The Africa's Talking C# API wrapper provides convenient access to the Africa's Talking API from applications written in C#. With support for .NET45, .NET46 and .NET Core 2 +  
 
-## Documentation 
+## The Documentation 
 Take a look at the [API docs here](http://docs.africastalking.com/) for more information. 
 
 ## Installation Options
