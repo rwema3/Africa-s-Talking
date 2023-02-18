@@ -239,12 +239,6 @@ namespace AfricasTalkingCS_Tests
         {
             const string productName = "coolproduct";
             const string pageNumber = "1";
-            const string pageNumber = "1";
-            const string count = "3";
-            string fetchTransactionsResponse = _atGWInstance.FetchWalletTransactions(pageNumber,count);
-            JObject fetchTransactionsResponseJson = JObject.Parse(fetchTransactionsResponse);
-            var fetchTransactionsResponseStatus = fetchTransactionsResponseJson.GetValue("status");
-            var success = (fetchTransactionsResponseStatus.ToString() == "Success");
             Assert.IsTrue(success, "Should successfully fetch wallet transactions with default params");
         }
 
