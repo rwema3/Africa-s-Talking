@@ -174,25 +174,6 @@ namespace AfricasTalkingCS_Tests
             var success = res["status"] == "Success" && checkout.Status == "PendingValidation";
             Assert.IsTrue(success, "Should succesfully complete a Card checkout transaction");
         }
-
-        [Ignore]
-        [TestMethod]
-        public void DoWalletTransfer()
-        {
-            const int productCode    = 1234;
-            const string productName = "coolproduct";
-            decimal amount           = 150M;
-            string currencyCode      = "KES";
-            Dictionary<string, string> metadata = new Dictionary<string, string>
-            {
-                {"mode" , "transfer"}
-            };
-
-            StashResponse stashResponse = _atGWInstance.WalletTransfer(productName, productCode, currencyCode, amount, metadata);
-            var success = stashResponse.Status == "Success";
-            Assert.IsTrue(success, "Should transfer amounts between wallets");
-        }
-        
         }
     }
 }
