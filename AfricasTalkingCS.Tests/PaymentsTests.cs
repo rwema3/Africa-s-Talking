@@ -250,10 +250,6 @@ namespace AfricasTalkingCS_Tests
             Assert.IsTrue(success, "Should successfully fetch transactions based on given date");
         }
 
-        [Ignore]
-        [TestMethod]
-        public void DoFetchProductTransactionByCategory()
-        {
 
         [Ignore]
         [TestMethod]
