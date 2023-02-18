@@ -223,15 +223,6 @@ namespace AfricasTalkingCS_Tests
         [TestMethod]
         public void DoFetchProductTransactions()
         {
-
-        [TestMethod]
-        public void DoFetchWalletBalance()
-        {
-            string fetchBalanceResponse = _atGWInstance.FetchWalletBalance();
-            JObject fetchBalanceResponseJson = JObject.Parse(fetchBalanceResponse);
-            var fetchBalanceResponseStatus = fetchBalanceResponseJson.GetValue("status");
-            var success = (fetchBalanceResponseStatus.ToString() == "Success");
-            Assert.IsTrue(success, "Should successfully fetch wallet balance");
         }
     }
 }
