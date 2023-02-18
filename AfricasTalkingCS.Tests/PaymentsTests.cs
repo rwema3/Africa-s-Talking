@@ -223,22 +223,6 @@ namespace AfricasTalkingCS_Tests
         [TestMethod]
         public void DoFetchProductTransactions()
         {
-            const string productName = "coolproduct";
-            const string pageNumber = "1";
-            const string count = "3";
-            string fetchTransactionsResponse = _atGWInstance.FetchProductTransactions(productName, pageNumber,count);
-            JObject fetchTransactionsResponseJson = JObject.Parse(fetchTransactionsResponse);
-            var fetchTransactionsResponseStatus = fetchTransactionsResponseJson.GetValue("status");
-            var success = (fetchTransactionsResponseStatus.ToString() == "Success");
-            Assert.IsTrue(success, "Should successfully fetch transactions with default params");
-        }
-
-        [Ignore]
-        [TestMethod] 
-        public void DoFetchProductTransactionsByDateDate() 
-        {
-            const string productName = "coolproduct";
-            const string pageNumber = "1";
             const string pageNumber = "1";
             const string count = "3";
             DateTime today = DateTime.Today;
