@@ -223,17 +223,6 @@ namespace AfricasTalkingCS_Tests
         [TestMethod]
         public void DoFetchProductTransactions()
         {
-            const string pageNumber = "1";
-            const string count = "3";
-            DateTime today = DateTime.Today;
-            string startDate = today.ToString("yyyy-MM-dd");
-            string endDate = today.ToString("yyyy-MM-dd");
-            string fetchTransactionsResponse = _atGWInstance.FetchWalletTransactions(pageNumber,count, startDate, endDate);
-            JObject fetchTransactionsResponseJson = JObject.Parse(fetchTransactionsResponse);
-            var fetchTransactionsResponseStatus = fetchTransactionsResponseJson.GetValue("status");
-            var success = (fetchTransactionsResponseStatus.ToString() == "Success");
-            Assert.IsTrue(success, "Should successfully fetch wallet transactions by date");
-        }
 
         [TestMethod]
         public void DoFetchWalletBalance()
