@@ -239,12 +239,6 @@ namespace AfricasTalkingCS_Tests
         {
             const string productName = "coolproduct";
             const string pageNumber = "1";
-
-
-        [Ignore]
-        [TestMethod]
-        public void DoFetchWalletTransactions()
-        {
             const string pageNumber = "1";
             const string count = "3";
             string fetchTransactionsResponse = _atGWInstance.FetchWalletTransactions(pageNumber,count);
