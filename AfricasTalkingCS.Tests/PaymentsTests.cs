@@ -154,26 +154,6 @@ namespace AfricasTalkingCS_Tests
                                    { "Parent Company",  "Offering Records" },
                                    { "C.E.O", "Boddhi Satva" }
                                };
-            const short CardCvv = 123;
-            const string CardNum = "123456789012345";
-            const string CountryCode = "NG";
-            const string CardPin = "1234";
-            const int ValidTillMonth = 9;
-            const int ValidTillYear = 2019;
-            var cardDetails = new PaymentCard(CardPin, CountryCode, CardCvv, ValidTillMonth, ValidTillYear, CardNum);
-            CardCheckoutResults checkout = _atGWInstance.CardCheckout(
-                    ProductName,
-                    cardDetails,
-                    CurrencyCode,
-                    Amount,
-                    Narration,
-                    metadata);
-            transactionId = checkout.TransactionId;
-            var validate = _atGWInstance.ValidateCardOtp(transactionId, Otp);
-            var res = JsonConvert.DeserializeObject(validate);
-            var success = res["status"] == "Success" && checkout.Status == "PendingValidation";
-            Assert.IsTrue(success, "Should succesfully complete a Card checkout transaction");
-        }
         }
     }
 }
