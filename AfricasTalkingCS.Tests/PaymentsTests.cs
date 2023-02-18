@@ -193,36 +193,6 @@ namespace AfricasTalkingCS_Tests
             Assert.IsTrue(success, "Should transfer amounts between wallets");
         }
         
-        [Ignore]
-        [TestMethod]
-        public void DoTopupStash()
-        {
-            const string productName = "coolproduct";
-            decimal amount           = 150M;
-            string currencyCode      = "KES";
-            Dictionary <string, string> metadata = new Dictionary<string, string> {
-                {"what this is","cool stuff"}
-            };
-            StashResponse stashResponse = _atGWInstance.TopupStash(productName, currencyCode, amount, metadata);
-            var success = stashResponse.Status == "Success";
-            Assert.IsTrue(success, "Should successfully topup product stash");
-        }
-
-        [Ignore]
-        [TestMethod]
-        public void DoFindTransaction()
-        {
-            string transactionIdResponse = _atGWInstance.FindTransaction(TestId);
-            JObject transactionIdResponseJson = JObject.Parse(transactionIdResponse);
-            var status = transactionIdResponseJson.GetValue("status");
-            var success = (status.ToString() == "Success");
-            Assert.IsTrue(success, "Should successfully find a transaction given it's ID");
-        }
-
-        [Ignore]
-        [TestMethod]
-        public void DoFetchProductTransactions()
-        {
         }
     }
 }
