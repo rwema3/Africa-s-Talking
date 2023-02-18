@@ -239,6 +239,10 @@ namespace AfricasTalkingCS_Tests
         {
             const string productName = "coolproduct";
             const string pageNumber = "1";
+            const string count = "3";
+            DateTime today = DateTime.Today;
+            string startDate = today.ToString("yyyy-MM-dd");
+            string endDate = today.ToString("yyyy-MM-dd");
 
 
         [Ignore]
