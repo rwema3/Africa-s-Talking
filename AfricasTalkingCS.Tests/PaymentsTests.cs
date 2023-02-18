@@ -239,6 +239,13 @@ namespace AfricasTalkingCS_Tests
         {
             const string productName = "coolproduct";
             const string pageNumber = "1";
+            Assert.IsTrue(success, "Should successfully fetch wallet transactions with default params");
+        }
+
+        [Ignore]
+        [TestMethod]
+        public void DoFetchWalletTransactionsByDate()
+        {
             const string pageNumber = "1";
             const string count = "3";
             DateTime today = DateTime.Today;
