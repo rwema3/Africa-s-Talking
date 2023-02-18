@@ -254,6 +254,13 @@ namespace AfricasTalkingCS_Tests
         [TestMethod]
         public void DoFetchProductTransactionByCategory()
         {
+            const string productName = "coolproduct";
+            const string pageNumber = "1";
+            const string count = "3";
+            const string category = "MobileCheckout";
+            string fetchTransactionsResponse = _atGWInstance.FetchProductTransactions(productName, pageNumber,count, category);
+            JObject fetchTransactionsResponseJson = JObject.Parse(fetchTransactionsResponse);
+          
 
         [Ignore]
         [TestMethod]
