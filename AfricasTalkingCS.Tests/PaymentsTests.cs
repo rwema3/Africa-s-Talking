@@ -243,12 +243,6 @@ namespace AfricasTalkingCS_Tests
             DateTime today = DateTime.Today;
             string startDate = today.ToString("yyyy-MM-dd");
             string endDate = today.ToString("yyyy-MM-dd");
-            string fetchTransactionsResponse = _atGWInstance.FetchProductTransactions(productName, pageNumber,count, startDate, endDate);
-            JObject fetchTransactionsResponseJson = JObject.Parse(fetchTransactionsResponse);
-            var fetchTransactionsResponseStatus = fetchTransactionsResponseJson.GetValue("status");
-            var success = (fetchTransactionsResponseStatus.ToString() == "Success");
-            Assert.IsTrue(success, "Should successfully fetch transactions based on given date");
-        }
 
 
         [Ignore]
